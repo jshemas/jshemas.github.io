@@ -10,6 +10,9 @@ angular.module('jsApp', ['ngCookies', 'ui.router', 'ui.bootstrap']).config(['$st
 		url: '/',
 		controller: 'homeCtrl',
 		templateUrl: '/partials/home'
+	}).state('public.resume', {
+		url: '/resume',
+		templateUrl: '/partials/resume'
 	}).state('public.404', {
 		url: '/404/',
 		templateUrl: '/partials/404'

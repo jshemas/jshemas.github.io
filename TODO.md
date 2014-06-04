@@ -11,5 +11,4 @@ Client Side:
 - Add a page for angular
 - Add a page for node.js
 - Add a page for MongoDB
-- Add a page for Resume
 
