@@ -12,3 +12,7 @@ Client Side:
 - Add a page for node.js
 - Add a page for MongoDB
 
+Notes:
+-How to make a gist:
+	<gist id="15dda4046b256af66956"></gist>
+

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('jsApp', ['ngCookies', 'ui.router', 'ui.bootstrap']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+angular.module('jsApp', ['ngCookies', 'ui.router', 'ui.bootstrap', 'gist']).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
 	// Public routes
 	$stateProvider.state('public', {
