@@ -13,6 +13,18 @@ angular.module('jsApp', ['ngCookies', 'ui.router', 'ui.bootstrap', 'gist']).conf
 	}).state('public.resume', {
 		url: '/resume',
 		templateUrl: '/partials/resume'
+	}).state('public.node', {
+		url: '/node',
+		templateUrl: '/partials/node'
+	}).state('public.angular', {
+		url: '/angular',
+		templateUrl: '/partials/angular'
+	}).state('public.mongo', {
+		url: '/mongo',
+		templateUrl: '/partials/mongo'
+	}).state('public.grunt', {
+		url: '/grunt',
+		templateUrl: '/partials/grunt'
 	}).state('public.404', {
 		url: '/404/',
 		templateUrl: '/partials/404'
