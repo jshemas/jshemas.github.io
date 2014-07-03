@@ -31,7 +31,7 @@
     "name": "jshemas"
   },
   "scripts": {
-    "start": "node app"
+    "start": "grunt prod"
   },
   "engines": {
     "node": "0.10.24",

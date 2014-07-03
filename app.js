@@ -8,10 +8,19 @@ var express = require('express'),
 
 var app = module.exports = express();
 
-app.set('views', __dirname + '/client/app/views');
-var ectRenderer = ECT({ watch: true, root: __dirname + '/client/app/views', ext : '.html' });
-app.use(express.static(__dirname + '/client'));
-app.use(errorhandler({dumpExceptions: true, showStack: true}));
+if (app.get('env') === 'prod') {
+	app.use(compress());
+	app.set('views', __dirname + '/dist/app/views');
+	var ectRenderer = ECT({ watch: true, root: __dirname + '/dist/app/views', ext : '.html' });
+	app.use(express.static(__dirname + '/dist', { maxAge: 345600000 })); // four days
+	app.use(errorhandler());
+} else {
+	app.set('views', __dirname + '/client/app/views');
+	var ectRenderer = ECT({ watch: true, root: __dirname + '/client/app/views', ext : '.html' });
+	app.use(express.static(__dirname + '/client'));
+	app.use(errorhandler({dumpExceptions: true, showStack: true}));
+}
+
 
 app.use(logfmt.requestLogger());
 app.engine('.html', ectRenderer.render);
