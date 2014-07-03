@@ -29,7 +29,7 @@ app.use(bodyParser());
 app.use(methodOverride());
 
 require('./server/routes.js')(app);
-
+console.log("process.env.PORT:",process.env.PORT);
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
 	console.log("Starting Server on Port:" + port);

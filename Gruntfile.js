@@ -85,6 +85,9 @@ module.exports = function (grunt) {
 		},
 		// express deploy
 		express: {
+			options: {
+				port: process.env.PORT || 5000
+			},
 			dev: {
 				options: {
 					script: './app.js',
