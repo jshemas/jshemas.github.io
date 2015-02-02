@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 			},
 			pages: {
 				options: {
-					remote: 'git@github.com:jshemas/joshshemas.com.github.io.git',
+					remote: 'git@github.com:jshemas/joshshemas.com.git',
 					branch: 'gh-pages'
 				}
 			},
