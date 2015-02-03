@@ -1,11 +1,6 @@
-'use strict';
 angular.module('jsApp', ['gist', 'ngRoute', 'angulartics', 'angulartics.google.analytics']).config(
 	[
-		'$httpProvider',
-		'$analyticsProvider',
 		function (
-			$httpProvider,
-			$analyticsProvider
 		) {}
 	]
 )

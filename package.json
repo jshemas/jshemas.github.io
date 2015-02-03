@@ -1,47 +1,37 @@
 {
-  "name": "joshshemas.com",
-  "description": "code base for joshshemas.com",
-  "homepage": "http://www.joshshemas.com",
-  "version": "0.1.0",
-  "main": "app.js",
-  "dependencies": {
-    "express": "3.4.1",
-    "logfmt": "1.1.2",
-    "body-parser": "1.2.2",
-    "method-override": "1.0.2",
-    "ect": "0.5.9",
-    "errorhandler" : "1.0.1",
-    "compression": "1.0.3",
-    "underscore": "1.6.0",
-    "grunt": "0.4.5",
-    "grunt-cli": "0.1.13",
-    "grunt-build-control": "0.3.0",
-    "grunt-contrib-clean": "0.5.0",
-    "grunt-contrib-copy": "0.5.0",
-    "grunt-contrib-cssmin": "0.9.0",
-    "grunt-contrib-jshint": "0.10.0",
-    "grunt-contrib-uglify": "0.4.0",
-    "grunt-http-server": "1.0.0",
-    "grunt-contrib-watch": "0.6.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jshemas/joshshemas.com"
-  },
-  "author": {
-    "name": "jshemas"
-  },
-  "scripts": {
-    "start": "grunt prod"
-  },
-  "engines": {
-    "node": "0.10.24",
-    "npm": "1.3.21"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "1.20.0",
-    "protractor": "0.23.1",
-    "grunt-protractor-runner": "1.0.0"
-  }
+	"name": "joshshemas.com",
+	"description": "code base for joshshemas.com",
+	"homepage": "http://www.joshshemas.com",
+	"version": "0.1.0",
+	"dependencies": {
+		"grunt": "0.4.5",
+		"grunt-cli": "0.1.13",
+		"grunt-build-control": "0.3.0",
+		"grunt-contrib-clean": "0.6.0",
+		"grunt-contrib-copy": "0.7.0",
+		"grunt-contrib-cssmin": "0.11.0",
+		"grunt-contrib-jshint": "0.11.0",
+		"grunt-contrib-uglify": "0.7.0",
+		"grunt-http-server": "1.1.0",
+		"grunt-contrib-watch": "0.6.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jshemas/joshshemas.com"
+	},
+	"author": {
+		"name": "jshemas"
+	},
+	"scripts": {
+		"start": "grunt"
+	},
+	"engines": {
+		"node": "0.10.36",
+		"npm": "1.3.21"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"protractor": "1.6.1",
+		"grunt-protractor-runner": "1.2.1"
+	}
 }

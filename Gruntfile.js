@@ -6,8 +6,12 @@ module.exports = function (grunt) {
 			options: {
 				jshintrc: '.jshintrc'
 			},
-			gruntfile: {
-				src: 'Gruntfile.js'
+			appfiles: {
+				src: [
+					'Gruntfile.js',
+					'package.json',
+					'app/scripts/*.js'
+				]
 			}
 		},
 		// protractor e2e tests (client)
@@ -32,25 +36,31 @@ module.exports = function (grunt) {
 				src: [ '**' ],
 				dest: 'dist',
 				expand: true
-			},
+			}
 		},
 		// clean(deletes) the dist folder
 		clean: {
 			dist: {
-				src: [ 'dist' ]
+				src: 'dist'
 			},
 			styles: {
-				src: [ 'dist/styles/*.css', '!dist/styles/app.css' ]
+				src: [
+					'dist/styles/*.css',
+					'!dist/styles/app.css'
+				]
 			},
 			scripts: {
-				src: [ 'dist/scripts/*.js', '!dist/scripts/app.js' ]
+				src: [
+					'dist/scripts/*.js',
+					'!dist/scripts/app.js'
+				]
 			}
 		},
 		// minifies CSS
 		cssmin: {
 			dist: {
 				files: {
-					'dist/styles/app.css': [ 'app/styles/*.css' ]
+					'dist/styles/app.css': 'app/styles/*.css'
 				}
 			}
 		},
@@ -61,7 +71,7 @@ module.exports = function (grunt) {
 					mangle: false
 				},
 				files: {
-					'dist/scripts/app.js': [ 'app/scripts/*.js' ]
+					'dist/scripts/app.js': 'app/scripts/*.js'
 				}
 			}
 		},
@@ -105,9 +115,36 @@ module.exports = function (grunt) {
 		},
 		// live watcher for file changes
 		watch: {
-			gruntfile: {
-				files: 'Gruntfile.js',
-				tasks: ['jshint:gruntfile']
+			dev: {
+				files: [
+					'Gruntfile.js',
+					'package.json',
+					'app/scripts/*.js',
+					'app/styles/*.css',
+					'app/views/*.html',
+					'app/*.html'
+				],
+				tasks: [
+					'http-server:dev:stop',
+					'jshint:gruntfile',
+					'http-server:dev:start'
+				]
+			},
+			prod: {
+				files: [
+					'Gruntfile.js',
+					'package.json',
+					'app/scripts/*.js',
+					'app/styles/*.css',
+					'app/views/*.html',
+					'app/*.html'
+				],
+				tasks: [
+					'http-server:prod:stop',
+					'jshint:gruntfile',
+					'build',
+					'http-server:prod:start'
+				]
 			}
 		}
 	});
@@ -122,8 +159,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	// Tasks.
-	grunt.registerTask('default', ['jshint', 'http-server:dev']);
-	grunt.registerTask('prod', ['jshint', 'build', 'http-server:prod']);
+	grunt.registerTask('default', ['jshint', 'watch:dev']);
 	grunt.registerTask('build', ['clean:dist', 'copy', 'cssmin', 'uglify', 'clean:styles', 'clean:scripts']);
+	grunt.registerTask('prod', ['jshint', 'build', 'watch:prod']);
 	grunt.registerTask('push', ['build', 'buildcontrol:pages']);
 };
