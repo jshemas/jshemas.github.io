@@ -1,58 +1,10 @@
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none;
-}
-
-html {
-	max-width: 1200px;
-	margin: 0 auto;
-	background: #fff;
-	position: relative; 
-}
-
-/* sets cursor */
-.nav, .pagination, .carousel a { cursor: pointer; }
-
-/* sets globals */
 body {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	color: #555;
+	font-family: 'Open Sans',sans-serif;
+	background: #e4e7ec;
 }
-li {
-	list-style-type: none;
-}
-a {
-	color: #0095dd;
-	text-decoration: none;
-}
-a:hover {
-	color: #0095dd;
-	text-decoration: underline;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-	margin-top: 0;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	color: #333;
-}
-
-/* set row */
-.row.container {
-	margin-top: 50px;
-}
-
-/* remove row margins on phone screen */
-@media (max-width: 400px) {
-	.row.container {
-		margin-top: 40px;
-		margin-left: 0;
-		margin-right: 0;
-	}
+.wrapper {
+	width: 970px;
+	margin: 0 auto;
 }
 
 /* some padding classes */
@@ -88,22 +40,32 @@ h6, .h6 {
 	display: none !important;
 }
 
-/* loading divs in */
-.fade-hide-setup, .fade-show-setup {
-	-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-	-moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-	-o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+/* Nav Bar */
+.nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3px 0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	border-radius: 3px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
 }
-.fade-hide-setup {
-	opacity:1;
+.nav li {
+	float: left;
 }
-.fade-hide-setup.fade-hide-start {
-	opacity:0;
+.nav li a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #777;
+	border-right: 1px solid #ccc;
 }
-.fade-show-setup {
-	opacity:0;
-}
-.fade-show-setup.fade-show-start {
-	opacity:1;
+.nav li a:hover {
+	color: #333;
+	background-color: #f2f2f2;
 }

@@ -13,7 +13,8 @@
 		<meta name='viewport' content='width=device-width'>
 		<meta name='fragment' content='!'>
 		<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600' type='text/css'>
-		<link rel="stylesheet" href="/styles/app.css">
+		<link rel='stylesheet' href='/lib/reset.css'>
+		<link rel='stylesheet' href='/styles/app.css'>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,43 +35,36 @@
 			<script src='/lib/json3.min.js'></script>
 		<![endif]-->
 		<div class='wrapper'>
-			<div class="navbar" role="navigation">
-				<div class="container">
-					<ul class="nav navbar-nav">
-						<li class="resumeNavButton" active-nav="active-nav" analytics-on="click" analytics-category="Nav" analytics-event="resume-tab-click" analytics-label="Resume">
-							<a href="/#/resume">Resume</a>
-						</li>
-						<li class="nodeNavButton" active-nav="active-nav" aanalytics-on="click" analytics-category="Nav" analytics-event="nodejs-tab-click" analytics-label="Node.js">
-							<a href="/#/node">Node.js</a>
-						</li>
-						<li class="angularNavButton" active-nav="active-nav" analytics-on="click" analytics-category="Nav" analytics-event="angular-tab-click" analytics-label="AngularJS">
-							<a href="/#/angular">AngularJS</a>
-						</li>
-						<li class="mongoNavButton" active-nav="active-nav" analytics-on="click" analytics-category="Nav" analytics-event="resume-tab-click" analytics-label="Resume">
-							<a href="/#/mongo">MongoDB</a>
-						</li>
-						<li class="gruntNavButton" active-nav="active-nav" analytics-on="click" analytics-category="Nav" analytics-event="resume-tab-click" analytics-label="Resume">
-							<a href="/#/grunt">Grunt</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div data-ui-view data-ng-view="ng-view"></div>
-			<div class='push'></div>
+			<ul class='nav' role='navigation'>
+				<li class='homeNavButton' analytics-on='click' analytics-category='Nav' analytics-event='home-tab-click' analytics-label='Home'>
+					<a href='/#/home'>Home</a>
+				</li>
+				<li class='resumeNavButton' analytics-on='click' analytics-category='Nav' analytics-event='resume-tab-click' analytics-label='Resume'>
+					<a href='/#/resume'>Resume</a>
+				</li>
+				<li class='nodeNavButton' analytics-on='click' analytics-category='Nav' analytics-event='nodejs-tab-click' analytics-label='Node.js'>
+					<a href='/#/node'>Node.js</a>
+				</li>
+				<li class='angularNavButton' analytics-on='click' analytics-category='Nav' analytics-event='angular-tab-click' analytics-label='AngularJS'>
+					<a href='/#/angular'>AngularJS</a>
+				</li>
+				<li class='mongoNavButton' analytics-on='click' analytics-category='Nav' analytics-event='resume-tab-click' analytics-label='Resume'>
+					<a href='/#/mongo'>MongoDB</a>
+				</li>
+				<li class='gruntNavButton' analytics-on='click' analytics-category='Nav' analytics-event='resume-tab-click' analytics-label='Resume'>
+					<a href='/#/grunt'>Grunt</a>
+				</li>
+			</ul>
+			<div data-ui-view data-ng-view='ng-view'></div>
 		</div>
-		<div class='footer'>
-			<div class='footer-cont'>
-				<span class='text-muted'>Copyright (c) 2015</span>
-			</div>
-		</div>
-		<script src="/lib/angular.min.js"></script>
-		<script src="/lib/angular-route.min.js"></script>
-		<script src="/lib/angular-resource.min.js"></script>
-		<script src="/lib/angulartics.min.js"></script>
-		<script src="/lib/angulartics-ga.min.js"></script>
-		<script src="/scripts/app.js"></script>
-		<script src="/scripts/directives.js"></script>
-		<script src="/scripts/services.js"></script>
-		<script src="/scripts/controllers.js"></script>
+		<script src='/lib/angular.min.js'></script>
+		<script src='/lib/angular-route.min.js'></script>
+		<script src='/lib/angular-resource.min.js'></script>
+		<script src='/lib/angulartics.min.js'></script>
+		<script src='/lib/angulartics-ga.min.js'></script>
+		<script src='/scripts/app.js'></script>
+		<script src='/scripts/directives.js'></script>
+		<script src='/scripts/services.js'></script>
+		<script src='/scripts/controllers.js'></script>
 	</body>
 </html>

@@ -159,8 +159,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	// Tasks.
-	grunt.registerTask('default', ['jshint', 'watch:dev']);
+	grunt.registerTask('default', ['jshint', 'http-server:dev:start', 'watch:dev']);
 	grunt.registerTask('build', ['clean:dist', 'copy', 'cssmin', 'uglify', 'clean:styles', 'clean:scripts']);
-	grunt.registerTask('prod', ['jshint', 'build', 'watch:prod']);
+	grunt.registerTask('prod', ['jshint', 'build', 'http-server:prod:start', 'watch:prod']);
 	grunt.registerTask('push', ['build', 'buildcontrol:pages']);
 };
